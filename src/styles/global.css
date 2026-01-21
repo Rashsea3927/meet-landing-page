@@ -1,1 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  /* Fonts Family */
+  --font-red-hat: 'Red Hat Display', sans-serif;
+
+  /* Line Height */
+  --leading-tight: 1.1;
+
+  /* Colors */
+  --color-cyan-600: hsl(192, 37%, 48%);
+  --color-cyan-300: hsl(192, 90%, 77%);
+  --color-purple-600: hsl(268, 34%, 53%);
+  --color-purple-300: hsl(268, 100%, 86%);
+  --color-slate-900: hsl(240, 21%, 20%);
+  --color-slate-600: hsl(240, 10%, 257%);
+  --color-slate-300: hsl(240, 18%, 85%);
+  --color-white: hsl(0, 0%, 98%);
+}
+
+@layer components {
+  .text-preset-1 {
+    @apply text-[40px] leading-tight tracking-normal font-black sm:text-5xl lg:text-6xl;
+  }
+
+  .text-preset-2 {
+    @apply text-[32px] leading-tight tracking-normal font-black sm:text-4xl lg:text-[40px];
+  }
+
+  .text-preset-3 {
+    @apply text-xs leading-tight tracking-normal font-black sm:text-sm lg:text-base;
+  }
+
+  .text-preset-4 {
+    @apply text-base leading-normal tracking-[4px] font-medium lg:text-lg;
+  }
+
+  .text-preset-5 {
+    @apply text-base leading-normal tracking-normal font-black;
+  }
+}
