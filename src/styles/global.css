@@ -14,7 +14,7 @@
   --color-purple-600: hsl(268, 34%, 53%);
   --color-purple-300: hsl(268, 100%, 86%);
   --color-slate-900: hsl(240, 21%, 20%);
-  --color-slate-600: hsl(240, 10%, 257%);
+  --color-slate-600: hsl(240, 10%, 57%);
   --color-slate-300: hsl(240, 18%, 85%);
   --color-white: hsl(0, 0%, 98%);
 }
@@ -29,11 +29,11 @@
   }
 
   .text-preset-3 {
-    @apply text-xs leading-tight tracking-normal font-black sm:text-sm lg:text-base;
+    @apply text-xs leading-tight tracking-[4px] font-black sm:text-sm lg:text-base;
   }
 
   .text-preset-4 {
-    @apply text-base leading-normal tracking-[4px] font-medium lg:text-lg;
+    @apply text-base leading-normal tracking-normal font-medium lg:text-lg;
   }
 
   .text-preset-5 {
