@@ -1,0 +1,28 @@
+---
+import desktopLeftHeroImage from '@assets/desktop/image-hero-left.png';
+import desktopRightHeroImage from '@assets/desktop/image-hero-right.png';
+import tabletHeroImage from '@assets/tablet/image-hero.png';
+import { Image } from 'astro:assets';
+import Button from './button.astro';
+---
+
+<div class="overflow-x-hidden pt-16 pb-8 sm:py-16 lg:relative lg:mx-auto lg:max-w-[1440px] lg:py-22">
+  <div class="mb-12 lg:hidden">
+    <Image class="relative left-1/2 h-auto w-[115.47vw] max-w-none -translate-x-1/2 sm:w-[106.77vw] md:max-w-[820px]" src={tabletHeroImage} alt="hero image" width={820} height={303} />
+  </div>
+  <div class="mx-auto flex max-w-[448px] flex-col items-center justify-center gap-6 px-[35px] text-center sm:px-0 lg:gap-8">
+    <h1 class="text-preset-1 text-slate-900">Group Chat for Everyone.</h1>
+    <p class="text-preset-4 text-slate-600">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+    <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <Button variant="download" text="Download" />
+      <Button variant="what-is-it" text="What is it?" />
+    </div>
+  </div>
+
+  <div class="absolute top-[calc(50%-24px)] -left-30 hidden -translate-y-1/2 lg:block xl:-left-10 2xl:left-0">
+    <Image src={desktopLeftHeroImage} alt="desktop left hero image" width={394} height={303} />
+  </div>
+  <div class="absolute top-[calc(50%-24px)] -right-30 hidden -translate-y-1/2 lg:block xl:-right-10 2xl:right-0">
+    <Image src={desktopRightHeroImage} alt="desktop right hero image" width={394} height={303} />
+  </div>
+</div>
