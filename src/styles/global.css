@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Fonts Family */
@@ -17,26 +17,29 @@
   --color-slate-600: hsl(240, 10%, 57%);
   --color-slate-300: hsl(240, 18%, 85%);
   --color-white: hsl(0, 0%, 98%);
+
+  /* Breakpoints */
+  --breakpoint-2xl: 90.0625rem; /* 1441px */
 }
 
 @layer components {
   .text-preset-1 {
-    @apply text-[40px] leading-tight tracking-normal font-black sm:text-5xl lg:text-6xl;
+    @apply text-[40px] leading-tight font-black tracking-normal sm:text-5xl lg:text-6xl;
   }
 
   .text-preset-2 {
-    @apply text-[32px] leading-tight tracking-normal font-black sm:text-4xl lg:text-[40px];
+    @apply text-[32px] leading-tight font-black tracking-normal sm:text-4xl lg:text-[40px];
   }
 
   .text-preset-3 {
-    @apply text-xs leading-tight tracking-[4px] font-black sm:text-sm lg:text-base;
+    @apply text-xs leading-tight font-black tracking-[4px] sm:text-sm lg:text-base;
   }
 
   .text-preset-4 {
-    @apply text-base leading-normal tracking-normal font-medium lg:text-lg;
+    @apply text-base leading-normal font-medium tracking-normal lg:text-lg;
   }
 
   .text-preset-5 {
-    @apply text-base leading-normal tracking-normal font-black;
+    @apply text-base leading-normal font-black tracking-normal;
   }
 }
