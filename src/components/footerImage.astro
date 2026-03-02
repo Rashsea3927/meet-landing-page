@@ -1,0 +1,36 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
+
+interface FooterImageProps {
+  mobileImageUrl: string | ImageMetadata;
+  tabletImageUrl: string | ImageMetadata;
+  desktopImageUrl: string | ImageMetadata;
+}
+
+const { mobileImageUrl, tabletImageUrl, desktopImageUrl } = Astro.props;
+
+const mobileImage = await getImage({
+  src: mobileImageUrl,
+  width: 750,
+  height: 856,
+});
+
+const tabletImage = await getImage({
+  src: tabletImageUrl,
+  width: 768,
+  height: 428,
+});
+
+const desktopImage = await getImage({
+  src: desktopImageUrl,
+  width: 1440,
+  height: 308,
+});
+---
+
+<picture>
+  <source srcset={desktopImage.src} media="(min-width: 1280px)" />
+  <source srcset={tabletImage.src} media="(min-width: 768px)" />
+  <img class="absolute top-0 left-0 -z-1 h-full w-full object-cover" src={mobileImage.src} alt="" />
+</picture>

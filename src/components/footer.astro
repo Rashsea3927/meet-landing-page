@@ -1,0 +1,22 @@
+---
+import imageFooter from '@assets/desktop/image-footer.jpg';
+import imageFooterMobile from '@assets/mobile/image-footer.jpg';
+import imageFooterTablet from '@assets/tablet/image-footer.jpg';
+import Button from './button.astro';
+import FooterImage from './footerImage.astro';
+import Number from './number.astro';
+---
+
+<footer class="relative pt-27">
+  <Number number="02" className="absolute top-0 left-1/2 z-1 -translate-x-1/2" />
+  <div class="relative bg-cyan-600/80 px-8 py-16 text-center lg:px-0 lg:py-28">
+    <FooterImage mobileImageUrl={imageFooterMobile} tabletImageUrl={imageFooterTablet} desktopImageUrl={imageFooter} />
+    <div class="mx-auto max-w-[448px] space-y-6 sm:max-w-[504px] lg:flex lg:max-w-[1120px] lg:items-center lg:space-y-0 lg:space-x-8 lg:text-left">
+      <h2 class="text-preset-2 text-white">Experience more together</h2>
+      <p class="text-preset-4 hidden text-white sm:block">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <div class="shrink-0">
+        <Button bgColor="purple" text="Download" variant="download" />
+      </div>
+    </div>
+  </div>
+</footer>
