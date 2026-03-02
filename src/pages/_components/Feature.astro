@@ -1,0 +1,29 @@
+---
+import imageManTexting from '@assets/desktop/image-man-texting.jpg';
+import imageMenInMeeting from '@assets/desktop/image-men-in-meeting.jpg';
+import imageWomanVideocall from '@assets/desktop/image-woman-in-videocall.jpg';
+import imageWomenVideochatting from '@assets/desktop/image-women-videochatting.jpg';
+import { Image } from 'astro:assets';
+
+const FeatureImages = [imageWomanVideocall, imageWomenVideochatting, imageMenInMeeting, imageManTexting];
+---
+
+<div class="px-8 pt-8 pb-16 md:px-11 md:pt-14 lg:mx-auto lg:max-w-[1120px] lg:pb-18">
+  <slot />
+  <div class="mb-16 grid grid-cols-2 gap-4 md:grid-cols-4">
+    {
+      FeatureImages.map((image, index) => (
+        <div class="overflow-hidden rounded-lg">
+          <Image src={image} alt={`feature image ${index + 1}`} width={510} height={484} />
+        </div>
+      ))
+    }
+  </div>
+  <div class="mx-auto space-y-8 text-center sm:max-w-[504px] lg:max-w-[544px]">
+    <div class="space-y-4 sm:px-8 lg:px-12">
+      <p class="text-preset-3 text-cyan-600 uppercase">Built for modern use</p>
+      <h2 class="text-preset-2 text-slate-900">Smarter meetings, all in one place</h2>
+    </div>
+    <p class="text-preset-4 text-slate-600">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+  </div>
+</div>
