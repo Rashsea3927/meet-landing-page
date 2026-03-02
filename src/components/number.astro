@@ -1,0 +1,9 @@
+---
+const { number, className = '' } = Astro.props;
+---
+
+<div class={className}>
+  <div class="flex flex-col items-center before:block before:h-20 before:w-px before:bg-slate-300 before:content-['']">
+    <span class="text-preset-5 inline-flex size-14 items-center justify-center rounded-full border border-slate-300 bg-white text-center text-slate-600">{number}</span>
+  </div>
+</div>
