@@ -1,9 +1,14 @@
 ---
+import Number from '@/components/number.astro';
 import Layout from '@/layouts/layout.astro';
+import Feature from '@/pages/_components/Feature.astro';
 import Hero from '@components/hero.astro';
 import '@styles/global.css';
 ---
 
 <Layout>
   <Hero />
+  <Feature>
+    <Number number="01" className="mb-16" />
+  </Feature>
 </Layout>
