@@ -1,0 +1,10 @@
+---
+import { clsx } from 'clsx';
+
+const { text, bgColor, variant } = Astro.props;
+---
+
+<a href="#" class={clsx('inline-flex rounded-full text-preset-5 px-10 py-4 text-white transition-colors duration-300 cursor-pointer', bgColor === 'cyan' ? 'bg-cyan-600 hover:bg-[#71C0D4]' : 'bg-purple-600 hover:bg-[#B18BDD]')}>
+  {text}
+  {variant === 'download' && <span class={`${bgColor === 'cyan' ? 'text-cyan-300' : 'text-purple-300'}`}>&ensp;v1.3</span>}
+</a>
